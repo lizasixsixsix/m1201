@@ -1,15 +1,24 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
+using m1201.Library;
 
 namespace m1201
 {
     class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
+            Console.Write("Enter site url: ");
+
+            var url = Console.ReadLine();
+
+            var scraper = new Scraper(url);
+
+            scraper.Do();
+
+            Console.WriteLine("Download completed.");
+
+            Console.ReadKey();
         }
     }
 }
